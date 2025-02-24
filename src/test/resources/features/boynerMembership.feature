@@ -2,7 +2,7 @@
 Feature: Boyner Negatif Uyelik
   @boyner
   Scenario Outline: Negatif Uyelik
-    Given boyner sitesine gidilir
+    Given "boyner" sitesine gidilir
     When login butonunun ustune gidilir.
     And uye ol linkine tiklanir
     Then cerezler kabul edilir

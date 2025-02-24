@@ -1,7 +1,7 @@
 
 Feature: SearchMadamaCocoTr
   Scenario: Madam coco sitesinden tr arama yaptırma
-    Given madama coco sitesine gidilir.
+    Given "madama coco" sitesine gidilir.
     And arama kutusuna vazo yazılır
     Then sonuçlarda vazo olduğu doğrulanır.
 

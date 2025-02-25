@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         features = "src/test/resources/features",
         glue = {"cucumberProjectsExample/stepDefinitions", "hooks"},
-        tags = "@ciceksepeti",
+        tags = "@trendyol",
         dryRun = false
 )
 public class Runner

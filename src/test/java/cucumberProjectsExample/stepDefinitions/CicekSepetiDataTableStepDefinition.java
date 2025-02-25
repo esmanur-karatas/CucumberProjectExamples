@@ -24,6 +24,9 @@ public class CicekSepetiDataTableStepDefinition {
             case "boyner":
                 Driver.getDriver().get(ConfigurationReader.getProperty("boyner"));
                 break;
+            case "trendyol":
+                Driver.getDriver().get(ConfigurationReader.getProperty("trendyol"));
+                break;
             case "ets tur":
                 Driver.getDriver().get(ConfigurationReader.getProperty("etstur"));
                 break;

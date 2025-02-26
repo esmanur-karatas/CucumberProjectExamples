@@ -56,7 +56,5 @@ Bu proje sayesinde:
 
 ---
 
-🔗 **Detaylar için LinkedIn gönderime göz atabilirsiniz:** [LinkedIn Gönderi Bağlantısı]
-
 📌 **Geliştirme ve katkılar için PR'lere açığım!** 🚀
 

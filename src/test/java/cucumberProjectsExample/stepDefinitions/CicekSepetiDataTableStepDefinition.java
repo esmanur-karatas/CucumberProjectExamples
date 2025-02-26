@@ -33,6 +33,9 @@ public class CicekSepetiDataTableStepDefinition {
             case "madama coco":
                 Driver.getDriver().get(ConfigurationReader.getProperty("madameCoco"));
                 break;
+            case "mynet":
+                Driver.getDriver().get(ConfigurationReader.getProperty("mynet"));
+                break;
         }
     }
     @When("cicek sepeti sayfası seçilir.")

@@ -8,12 +8,13 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty",
-                "html:target/default-cucumber-reports"
+                "html:target/default-cucumber-reports",
+                "rerun:Failed/failedScenarios.txt"
         },
         monochrome = true,
         features = "src/test/resources/features",
         glue = {"cucumberProjectsExample/stepDefinitions", "hooks"},
-        tags = "@trendyol",
+        tags = "@rerun",
         dryRun = false
 )
 public class Runner

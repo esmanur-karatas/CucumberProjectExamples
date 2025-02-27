@@ -43,6 +43,9 @@ public class CicekSepetiDataTableStepDefinition {
             case "etstur":
                 Driver.getDriver().get(ConfigurationReader.getProperty("etstur"));
                 break;
+            case "getir":
+                Driver.getDriver().get(ConfigurationReader.getProperty("getir"));
+                break;
         }
     }
 

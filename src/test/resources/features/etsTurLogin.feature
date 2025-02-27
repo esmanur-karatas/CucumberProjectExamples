@@ -1,7 +1,7 @@
 @ets
 Feature: ets tur sitesi login
   Background: ets sitesine giris
-    Given "ets tur" sitesine gidilir.
+    Given "etstur" sitesine gidilir.
     And hesabım butonu üstüne gidilir.
     When hesabım butonuna basilir
 

@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         features = "src/test/resources/features",
         glue = {"cucumberProjectsExample/stepDefinitions", "hooks"},
-        tags = "@rerun",
+        tags = "@ets",
         dryRun = false
 )
 public class Runner

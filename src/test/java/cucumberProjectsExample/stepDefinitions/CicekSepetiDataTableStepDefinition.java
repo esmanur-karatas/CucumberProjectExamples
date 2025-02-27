@@ -15,9 +15,10 @@ import java.util.List;
 public class CicekSepetiDataTableStepDefinition {
 
     CicekSepetiDataTablePage cicekSepetiDataTablePage = new CicekSepetiDataTablePage();
+
     @Given("{string} sitesine gidilir")
     public void sitesine_gidilir(String string) {
-        switch (string){
+        switch (string) {
             case "cicek sepeti":
                 Driver.getDriver().get(ConfigurationReader.getProperty("ciceksepeti"));
                 break;
@@ -36,12 +37,20 @@ public class CicekSepetiDataTableStepDefinition {
             case "mynet":
                 Driver.getDriver().get(ConfigurationReader.getProperty("mynet"));
                 break;
+            case "pazarama":
+                Driver.getDriver().get(ConfigurationReader.getProperty("pazarama"));
+                break;
+            case "etstur":
+                Driver.getDriver().get(ConfigurationReader.getProperty("etstur"));
+                break;
         }
     }
+
     @When("cicek sepeti sayfası seçilir.")
     public void cicek_sepeti_sayfası_seçilir() {
         cicekSepetiDataTablePage.cicekSepetiSelect.click();
     }
+
     @When("dogum gunu linki tıklanır")
     public void dogum_gunu_linki_tıklanır() {
         cicekSepetiDataTablePage.birthDayButton.click();
@@ -51,18 +60,20 @@ public class CicekSepetiDataTableStepDefinition {
     public void dogum_gunu_sayfasında_olduğu_dogrulanır() {
         String expectedUrl = "https://www.ciceksepeti.com/d/dogum-gunu";
         String actualUrl = Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(expectedUrl,actualUrl);
+        Assert.assertEquals(expectedUrl, actualUrl);
     }
+
     @When("tasarim tipi drop down tıklanır")
     public void tasarim_tipi_drop_down_tıklanır() {
         ReusableMethods.wait(10);
         cicekSepetiDataTablePage.designTypeClick.click();
 
     }
+
     @Then("sirasiyla renklerin secildigi dogrulanir")
     public void sirasiyla_renklerin_secildigi_dogrulanir(DataTable dataTable) {
         List<String> bilgiler = dataTable.asList();
-        for (int i = 0; i < bilgiler.size(); i++){
+        for (int i = 0; i < bilgiler.size(); i++) {
             switch (bilgiler.get(i)) {
                 case "Buketler":
                     cicekSepetiDataTablePage.buketler.click();

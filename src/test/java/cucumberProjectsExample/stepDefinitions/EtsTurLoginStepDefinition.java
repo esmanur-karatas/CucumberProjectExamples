@@ -13,8 +13,8 @@ import org.junit.Assert;
 public class EtsTurLoginStepDefinition {
 
     EtsTurLoginPage etsTurLoginPage = new EtsTurLoginPage();
-    @Given("ets tur sitesine gidilir.")
-    public void ets_tur_sitesine_gidilir() {
+    @Given("{string} sitesine gidilir.")
+    public void sitesineGidilir(String arg0) {
         Driver.getDriver().get(ConfigurationReader.getProperty("etstur"));
     }
 
@@ -105,4 +105,6 @@ public class EtsTurLoginStepDefinition {
         Assert.assertTrue(etsTurLoginPage.verifySignUp.isDisplayed());
 
     }
+
+
 }
